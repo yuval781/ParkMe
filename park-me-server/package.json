@@ -1,0 +1,14 @@
+{
+  "name": "park-me-server",
+  "version": "1.0.0",
+  "description": "PARK ME - college parking lot API (Express)",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
