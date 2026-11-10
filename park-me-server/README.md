@@ -25,5 +25,4 @@ npm install
 npm start
 ```
 
-השרת עולה בכתובת `http://localhost:3000` (אפשר לשנות פורט בעזרת משתנה הסביבה `PORT`).
-אפשר לפתוח כל אחד מהנתיבים ישירות בדפדפן, למשל `http://localhost:3000/api/spots/summary`.
+השרת עולה בכתובת `http://localhost:3000`
