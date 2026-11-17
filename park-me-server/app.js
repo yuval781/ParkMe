@@ -16,8 +16,18 @@ app.get('/', (req, res) => {
     routes: [
       'GET /api/spots',
       'GET /api/spots/summary',
+      'GET /api/spots/search?status=&type=&row=',
+      'GET /api/spots/:id',
+      'POST /api/spots',
+      'PUT /api/spots/:id',
+      'DELETE /api/spots/:id',
       'GET /api/parkings',
       'GET /api/parkings/active',
+      'GET /api/parkings/search?plate=&spotId=',
+      'GET /api/parkings/:id',
+      'POST /api/parkings',
+      'PUT /api/parkings/:id',
+      'DELETE /api/parkings/:id',
     ],
   });
 });

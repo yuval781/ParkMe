@@ -1,17 +1,16 @@
 const express = require('express');
-const parkings = require('../data/parkings');
+const parkingsController = require('../controllers/parkings');
 
 const router = express.Router();
 
-// GET /api/parkings - all parking records (finished and active)
-router.get('/', (req, res) => {
-  res.json(parkings);
-});
+router.get('/', parkingsController.getParkings);
+router.get('/active', parkingsController.getActiveParkings);
+router.get('/search', parkingsController.searchParkings);
+// Must stay last: ':id' matches any word, so it would catch "active" and "search".
+router.get('/:id', parkingsController.getParkingById);
 
-// GET /api/parkings/active - cars that are still in the lot (no exit time yet)
-router.get('/active', (req, res) => {
-  const active = parkings.filter((parking) => parking.exitTime === null);
-  res.json(active);
-});
+router.post('/', parkingsController.addParking);
+router.put('/:id', parkingsController.updateParking);
+router.delete('/:id', parkingsController.deleteParking);
 
 module.exports = router;
